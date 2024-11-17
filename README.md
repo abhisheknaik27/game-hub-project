@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Gamerz Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gameerz Hub is a dynamic web application that lets users explore an extensive library of games fetched from the [RAWG.io API](https://rawg.io/apidocs). Users can filter games by genre, platform, and sort them using various ordering options for an enhanced browsing experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Game Listing
+- Fetches and displays a comprehensive list of games from the RAWG.io API.
+- Includes detailed information for each game, such as name, genre, platform, and ratings.
 
-## Expanding the ESLint configuration
+### Genres
+- View games categorized by their respective genres (e.g., Action, Adventure, RPG, etc.).
+- Filter the game list based on a selected genre.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Platforms
+- Browse games by platform, such as PC, PlayStation, Xbox, Nintendo, etc.
+- Offers platform-specific filtering for a tailored experience.
 
-- Configure the top-level `parserOptions` property like this:
+### Order By Options
+- Sort games based on:
+  - Release date
+  - Popularity
+  - Ratings
+  - Name (alphabetical order)
+- Enables users to quickly find the games they are looking for.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Dynamic and Responsive Design
+- Built with a user-friendly interface that is responsive across devices.
+- Ensures a smooth experience with seamless transitions and interactions.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Tech Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Frontend
+- **React with Typescript**: For building the user interface.
+- **CSS/Styled Components**: For styling the components.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Backend
+- **RAWG.io API**: As the primary data source for fetching game details.
+- **Axios/Fetch API**: For making API calls.
+
+### State Management
+- **React State/Context API**: For managing and passing state between components efficiently.
+
